@@ -1,0 +1,43 @@
+
+
+body {
+    font-size: 10px;
+    overflow-x: hidden;
+    background-color: var(--bg);
+}
+
+* {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+p, h1, h2, a{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 10px;
+    color: var(--fnt)
+
+}
+
+input{
+    -webkit-box-shadow: inset 3px 5px 16px -18px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 3px 5px 16px -18px rgba(0,0,0,0.75);
+    box-shadow: inset 3px 5px 16px -18px rgba(0,0,0,0.75);
+    color: var(--fnt-input);
+    background-color: var(--bg-input);
+    border:0.1rem solid transparent;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+   /* box-shadow: 0 0 0 60px var(--bg-secondary) inset !important;
+    background-color: var(--bg-secondary)  !important;
+    background-clip: content-box !important;
+    color: var(--font-primary) !important;*/
+    border: 0.1rem solid var(--brdr-el);
+    box-shadow: 0 0 0px 1000px var(--bg-input) inset;
+    -webkit-box-shadow: 0 0 0px 1000px var(--bg-input) inset;
+    -webkit-text-fill-color:  var(--fnt-input);
+    transition: background-color 5000s ease-in-out 0s;
+}

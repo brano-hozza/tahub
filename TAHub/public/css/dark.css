@@ -1,0 +1,34 @@
+:root{
+    /*Default pozadie*/
+    --bg: #0e0e0e;
+    --bg-secondary: #1b1b1b;
+    --bg-third: #1d1d1d;
+    --bg-input: #1b1b1b;
+
+
+    
+    /*Default button*/
+    --btn:#6BB7DE;
+    /*Active button*/
+    --btn-active:rgb(12, 165, 241);
+    /*Hover button*/
+    --btn-hover:rgb(5, 123, 182);
+    /*Disabled button*/
+    --btn-disabled:rgb(155, 183, 197);
+
+    /*Okrej buttona*/
+    --brdr-btn: rgb(96, 177, 218);
+    /*Okrej elementu*/
+    --brdr-el: rgb(21, 177, 255);
+
+    /*Default font*/
+    --fnt: #ffffff;
+    /*Header font*/
+    --fnt-header:  #eaeef3;
+    /*Button font*/
+    --fnt-btn:  #000000;
+    /*Input font*/
+    --fnt-input:  #ffffff;
+    /*Error font*/
+    --fnt-err: red;
+}

@@ -1,0 +1,1110 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/all.js"></script>
+
+
+          <script>
+        $(function() {
+            setupLanguages(["bash","javascript"]);
+        });
+      </script>
+      </head>
+
+  <body class="">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" />
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+        <img src="images/logo.png" />
+                    <div class="lang-selector">
+                                  <a href="#" data-language-name="bash">bash</a>
+                                  <a href="#" data-language-name="javascript">javascript</a>
+                            </div>
+                            <div class="search">
+              <input type="text" class="search" id="input-search" placeholder="Search">
+            </div>
+            <ul class="search-results"></ul>
+              <div id="toc">
+      </div>
+                    <ul class="toc-footer">
+                                  <li><a href='http://github.com/mpociot/documentarian'>Documentation Powered by Documentarian</a></li>
+                            </ul>
+            </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+          <!-- START_INFO -->
+<h1>Info</h1>
+<p>Welcome to the generated API reference.
+<a href="http://localhost/docs/collection.json">Get Postman Collection</a></p>
+<!-- END_INFO -->
+<h1>API token</h1>
+<!-- START_e19414bb8ca64ad4ee4c4cc63da349c4 -->
+<h2>Renew tokena</h2>
+<p>Funkcia obnovi token a vrati novy token &lt;br&gt;
+Status kody: &lt;br&gt;
+420 - neplatny token &lt;br&gt;
+200 - ok</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/api/token" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"api_token":"inventore"}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/token"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "api_token": "inventore"
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/token</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>api_token</code></td>
+<td>string</td>
+<td>required</td>
+<td>API Token usera</td>
+</tr>
+</tbody>
+</table>
+<!-- END_e19414bb8ca64ad4ee4c4cc63da349c4 -->
+<h1>Cloud</h1>
+<!-- START_37a7c05f0326d5dddf781950108e3a95 -->
+<h2>Ziskaj priecinky</h2>
+<p>Status kody:&lt;br&gt;
+420 - neplatny token&lt;br&gt;
+200 - ok&lt;br&gt;</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/api/cloud/folders" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"api_token":"repellat","path":"et"}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/cloud/folders"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "api_token": "repellat",
+    "path": "et"
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/cloud/folders</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>api_token</code></td>
+<td>string</td>
+<td>required</td>
+<td>API token usera</td>
+</tr>
+<tr>
+<td><code>path</code></td>
+<td>string</td>
+<td>optional</td>
+<td>optional Cesta kde sa nachadza default /</td>
+</tr>
+</tbody>
+</table>
+<!-- END_37a7c05f0326d5dddf781950108e3a95 -->
+<!-- START_16e69251dca2530f4e602ebbb1111b18 -->
+<h2>Ziskaj subory</h2>
+<p>Status kody:&lt;br&gt;
+420 - neplatny token&lt;br&gt;
+200 - ok&lt;br&gt;</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/api/cloud/files" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"api_token":"aliquam","path":"rem"}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/cloud/files"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "api_token": "aliquam",
+    "path": "rem"
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/cloud/files</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>api_token</code></td>
+<td>string</td>
+<td>required</td>
+<td>API token usera</td>
+</tr>
+<tr>
+<td><code>path</code></td>
+<td>string</td>
+<td>optional</td>
+<td>optional Cesta kde sa nachadza default /</td>
+</tr>
+</tbody>
+</table>
+<!-- END_16e69251dca2530f4e602ebbb1111b18 -->
+<!-- START_46106adab8574ab1eb11be2a01c8f81d -->
+<h2>Vytvor priecinok</h2>
+<p>Status kody:&lt;br&gt;
+420 - neplatny token&lt;br&gt;
+421 - Nezadali ste meno&lt;br&gt;
+422 - nepodarilo sa vytvorit subor&lt;br&gt;
+200 - ok</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/api/cloud/folders/add" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"api_token":"tempora","path":"voluptate","name":"aspernatur"}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/cloud/folders/add"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "api_token": "tempora",
+    "path": "voluptate",
+    "name": "aspernatur"
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/cloud/folders/add</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>api_token</code></td>
+<td>string</td>
+<td>required</td>
+<td>API token usera</td>
+</tr>
+<tr>
+<td><code>path</code></td>
+<td>string</td>
+<td>optional</td>
+<td>optional Cesta kde sa nachadza.</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>string</td>
+<td>required</td>
+<td>Nazov priecinka</td>
+</tr>
+</tbody>
+</table>
+<!-- END_46106adab8574ab1eb11be2a01c8f81d -->
+<!-- START_5489ba8aa59201eca72640dd9530cf8e -->
+<h2>Odstran priecinok</h2>
+<p>Status kody:<br>
+420 - neplatny token<br>
+421 - Nezadali ste meno<br>
+422 - nepodarilo sa vymazat subor<br>
+200 - ok</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/api/cloud/folders/delete" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"api_token":"voluptatum","path":"aliquid","name":"explicabo"}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/cloud/folders/delete"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "api_token": "voluptatum",
+    "path": "aliquid",
+    "name": "explicabo"
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/cloud/folders/delete</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>api_token</code></td>
+<td>string</td>
+<td>required</td>
+<td>API token usera</td>
+</tr>
+<tr>
+<td><code>path</code></td>
+<td>string</td>
+<td>optional</td>
+<td>optional Cesta kde sa nachadza.</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>string</td>
+<td>required</td>
+<td>Nazov priecinka</td>
+</tr>
+</tbody>
+</table>
+<!-- END_5489ba8aa59201eca72640dd9530cf8e -->
+<!-- START_7e4ce5a9e07ac59cad985356337839cc -->
+<h2>Pridaj subor</h2>
+<p>Status kody:<br>
+420 - neplatny token<br>
+421 - Nezadali ste meno<br>
+422 - nepodarilo sa vytvorit subor<br>
+200 - ok</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/api/cloud/files/add" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"api_token":"quas","path":"ab","subor":"voluptate"}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/cloud/files/add"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "api_token": "quas",
+    "path": "ab",
+    "subor": "voluptate"
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/cloud/files/add</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>api_token</code></td>
+<td>string</td>
+<td>required</td>
+<td>API token usera</td>
+</tr>
+<tr>
+<td><code>path</code></td>
+<td>string</td>
+<td>optional</td>
+<td>optional Cesta kde sa nachadza</td>
+</tr>
+<tr>
+<td><code>subor</code></td>
+<td>file</td>
+<td>required</td>
+<td>Subor</td>
+</tr>
+</tbody>
+</table>
+<!-- END_7e4ce5a9e07ac59cad985356337839cc -->
+<!-- START_a2a50e865e8fb0fa14f61cd2e97dea88 -->
+<h2>Zmaz subor</h2>
+<p>Status kody: <br>
+420 - neplatny token <br>
+421 - Nezadali ste meno <br>
+422 - Nepodarilo sa vymazat subor <br>
+200 - ok</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/api/cloud/files/delete" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"api_token":"voluptatem","path":"consequuntur","subor":"ea"}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/cloud/files/delete"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "api_token": "voluptatem",
+    "path": "consequuntur",
+    "subor": "ea"
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/cloud/files/delete</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>api_token</code></td>
+<td>string</td>
+<td>required</td>
+<td>API token usera</td>
+</tr>
+<tr>
+<td><code>path</code></td>
+<td>string</td>
+<td>optional</td>
+<td>optional Cesta kde sa nachadza</td>
+</tr>
+<tr>
+<td><code>subor</code></td>
+<td>file</td>
+<td>required</td>
+<td>Subor</td>
+</tr>
+</tbody>
+</table>
+<!-- END_a2a50e865e8fb0fa14f61cd2e97dea88 -->
+<!-- START_987bd0ea20cc84f61f20320ddc6bded8 -->
+<h2>Stiahni subor</h2>
+<p>Status kody:&lt;br&gt;
+420 - neplatny token&lt;br&gt;
+421 - Nezadali ste meno&lt;br&gt;</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/api/cloud/files/download" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"api_token":"molestiae","path":"quia","subor":"sunt"}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/cloud/files/download"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "api_token": "molestiae",
+    "path": "quia",
+    "subor": "sunt"
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/cloud/files/download</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>api_token</code></td>
+<td>string</td>
+<td>required</td>
+<td>API token usera</td>
+</tr>
+<tr>
+<td><code>path</code></td>
+<td>string</td>
+<td>optional</td>
+<td>optional Cesta kde sa nachadza</td>
+</tr>
+<tr>
+<td><code>subor</code></td>
+<td>file</td>
+<td>required</td>
+<td>Subor</td>
+</tr>
+</tbody>
+</table>
+<!-- END_987bd0ea20cc84f61f20320ddc6bded8 -->
+<h1>Friends</h1>
+<!-- START_0b5acdf6770ce5d9c40580171d0299d8 -->
+<h2>Zobraz priatelov</h2>
+<p>Funkcia ziska priatelov&lt;br&gt;
+Status kody:&lt;br&gt;
+420 - neplatny token&lt;br&gt;
+200 - ok</p>
+<p><br><small style="padding: 1px 9px 2px;font-weight: bold;white-space: nowrap;color: #ffffff;-webkit-border-radius: 9px;-moz-border-radius: 9px;border-radius: 9px;background-color: #3a87ad;">Requires authentication</small></p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/api/mess/friends" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"api_token":"ullam"}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/mess/friends"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "api_token": "ullam"
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/mess/friends</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>api_token</code></td>
+<td>string</td>
+<td>required</td>
+<td>API Token usera</td>
+</tr>
+</tbody>
+</table>
+<!-- END_0b5acdf6770ce5d9c40580171d0299d8 -->
+<!-- START_1185a33796586559a4c58776f279a650 -->
+<h2>Pridat priatela</h2>
+<p>Funkcia prida priatela&lt;br&gt;
+Status kody:&lt;br&gt;
+420 - neplatny token&lt;br&gt;
+421 - priatel neexistuje&lt;br&gt;
+200 - ok&lt;br&gt;</p>
+<p><br><small style="padding: 1px 9px 2px;font-weight: bold;white-space: nowrap;color: #ffffff;-webkit-border-radius: 9px;-moz-border-radius: 9px;border-radius: 9px;background-color: #3a87ad;">Requires authentication</small></p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/api/mess/friends/add" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"api_token":"nobis","id":4}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/mess/friends/add"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "api_token": "nobis",
+    "id": 4
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/mess/friends/add</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>api_token</code></td>
+<td>string</td>
+<td>required</td>
+<td>API Token usera</td>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td>integer</td>
+<td>required</td>
+<td>ID priatela</td>
+</tr>
+</tbody>
+</table>
+<!-- END_1185a33796586559a4c58776f279a650 -->
+<h1>Login</h1>
+<!-- START_c3fa189a6c95ca36ad6ac4791a873d23 -->
+<h2>Prihlasenie</h2>
+<p>Funkcia prihlasi uzivatela vrati mu info&lt;br&gt;
+Status kody:&lt;br&gt;
+402 - zle udaje&lt;br&gt;
+200 - ok&lt;br&gt;</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/api/login" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"email":"id","password":"velit"}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/login"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "email": "id",
+    "password": "velit"
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/login</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>email</code></td>
+<td>string</td>
+<td>required</td>
+<td>Prihlasovaci email</td>
+</tr>
+<tr>
+<td><code>password</code></td>
+<td>string</td>
+<td>required</td>
+<td>Heslo uzivatela</td>
+</tr>
+</tbody>
+</table>
+<!-- END_c3fa189a6c95ca36ad6ac4791a873d23 -->
+<h1>Message</h1>
+<!-- START_b963ce6c981286d7557462085495f492 -->
+<h2>Odoslanie spravy</h2>
+<p>Funkcia vytvori spravu a odosle&lt;br&gt;
+Status kody:&lt;br&gt;
+420 - neplatny token&lt;br&gt;
+421 - prijmatel neexistuje&lt;br&gt;
+422 - prazdna sprava&lt;br&gt;
+200 - ok</p>
+<p><br><small style="padding: 1px 9px 2px;font-weight: bold;white-space: nowrap;color: #ffffff;-webkit-border-radius: 9px;-moz-border-radius: 9px;border-radius: 9px;background-color: #3a87ad;">Requires authentication</small></p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/api/mess/send" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"api_token":"dolor","id":2,"message":"perferendis"}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/mess/send"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "api_token": "dolor",
+    "id": 2,
+    "message": "perferendis"
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/mess/send</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>api_token</code></td>
+<td>string</td>
+<td>required</td>
+<td>API Token usera</td>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td>integer</td>
+<td>required</td>
+<td>ID prijmatela</td>
+</tr>
+<tr>
+<td><code>message</code></td>
+<td>string</td>
+<td>required</td>
+<td>Sprava</td>
+</tr>
+</tbody>
+</table>
+<!-- END_b963ce6c981286d7557462085495f492 -->
+<!-- START_468fb1049c2ae1e4edcaff93cff201b1 -->
+<h2>Ziskat spravy</h2>
+<p>Funkcia ziska spravy s priatelom&lt;br&gt;
+Status kody:&lt;br&gt;
+420 - neplatny token&lt;br&gt;
+421 - prijmatel neexistuje&lt;br&gt;
+422 - neplatny pocet sprav&lt;br&gt;
+200 - ok</p>
+<p><br><small style="padding: 1px 9px 2px;font-weight: bold;white-space: nowrap;color: #ffffff;-webkit-border-radius: 9px;-moz-border-radius: 9px;border-radius: 9px;background-color: #3a87ad;">Requires authentication</small></p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/api/mess" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"api_token":"est","id":14,"amount":22804771}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/mess"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "api_token": "est",
+    "id": 14,
+    "amount": 22804771
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/mess</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>api_token</code></td>
+<td>string</td>
+<td>required</td>
+<td>API Token usera</td>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td>integer</td>
+<td>required</td>
+<td>ID prijmatela</td>
+</tr>
+<tr>
+<td><code>amount</code></td>
+<td>number</td>
+<td>required</td>
+<td>Mnozstvo sprav</td>
+</tr>
+</tbody>
+</table>
+<!-- END_468fb1049c2ae1e4edcaff93cff201b1 -->
+<h1>Postman</h1>
+<!-- START_b9959acd995a954a578c5e346a670c5c -->
+<h2>CSRF</h2>
+<p>Vrati CSRF token</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/csrf" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/csrf"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/csrf</code></p>
+<!-- END_b9959acd995a954a578c5e346a670c5c -->
+<h1>Register</h1>
+<!-- START_781ad1ad01e05cc8a932e20631904ba7 -->
+<h2>Generuj token</h2>
+<p>funkcia vygeneruje novy token na registraciu&lt;br&gt;
+Status kody:&lt;br&gt;
+304 - Unauthorized&lt;br&gt;
+200 - ok&lt;br&gt;</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/api/regToken" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"api_token":"autem"}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/regToken"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "api_token": "autem"
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/regToken</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>api_token</code></td>
+<td>string</td>
+<td>optional</td>
+<td>Token admina</td>
+</tr>
+</tbody>
+</table>
+<!-- END_781ad1ad01e05cc8a932e20631904ba7 -->
+<!-- START_d7b7952e7fdddc07c978c9bdaf757acf -->
+<h2>Registracia</h2>
+<p>Funkcia registruje noveho uzivatela&lt;br&gt;
+Status kody:&lt;br&gt;
+420 - uzivatel existuje&lt;br&gt;
+421 - neplatny token&lt;br&gt;
+422 - Chybaju data&lt;br&gt;
+450 - neviem vytvorit subor&lt;br&gt;
+200 - ok</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/api/register" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"first_name":"est","last_name":"quia","email":"ea","password":"ex"}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/register"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "first_name": "est",
+    "last_name": "quia",
+    "email": "ea",
+    "password": "ex"
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/register</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>first_name</code></td>
+<td>string</td>
+<td>required</td>
+<td>Meno</td>
+</tr>
+<tr>
+<td><code>last_name</code></td>
+<td>string</td>
+<td>required</td>
+<td>Priezvisko</td>
+</tr>
+<tr>
+<td><code>email</code></td>
+<td>string</td>
+<td>required</td>
+<td>E-mail</td>
+</tr>
+<tr>
+<td><code>password</code></td>
+<td>string</td>
+<td>required</td>
+<td>Heslo</td>
+</tr>
+</tbody>
+</table>
+<!-- END_d7b7952e7fdddc07c978c9bdaf757acf -->
+      </div>
+      <div class="dark-box">
+                        <div class="lang-selector">
+                                    <a href="#" data-language-name="bash">bash</a>
+                                    <a href="#" data-language-name="javascript">javascript</a>
+                              </div>
+                </div>
+    </div>
+  </body>
+</html>

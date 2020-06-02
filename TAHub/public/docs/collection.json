@@ -1,0 +1,501 @@
+{
+    "variables": [],
+    "info": {
+        "name": "Laravel API",
+        "_postman_id": "615fa981-9d2f-4b5c-b0f6-a39f8668caa6",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.0.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "API token",
+            "description": "",
+            "item": [
+                {
+                    "name": "Renew tokena\nFunkcia obnovi token a vrati novy token <br>\nStatus kody: <br>\n420 - neplatny token <br>\n200 - ok",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api\/token",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"api_token\": \"inventore\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Cloud",
+            "description": "",
+            "item": [
+                {
+                    "name": "Ziskaj priecinky\nStatus kody:<br>\n420 - neplatny token<br>\n200 - ok<br>",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api\/cloud\/folders",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"api_token\": \"repellat\",\n    \"path\": \"et\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Ziskaj subory\nStatus kody:<br>\n420 - neplatny token<br>\n200 - ok<br>",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api\/cloud\/files",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"api_token\": \"aliquam\",\n    \"path\": \"rem\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Vytvor priecinok\nStatus kody:<br>\n420 - neplatny token<br>\n421 - Nezadali ste meno<br>\n422 - nepodarilo sa vytvorit subor<br>\n200 - ok",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api\/cloud\/folders\/add",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"api_token\": \"tempora\",\n    \"path\": \"voluptate\",\n    \"name\": \"aspernatur\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Odstran priecinok",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api\/cloud\/folders\/delete",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"api_token\": \"voluptatum\",\n    \"path\": \"aliquid\",\n    \"name\": \"explicabo\"\n}"
+                        },
+                        "description": "Status kody:<br>\n420 - neplatny token<br>\n421 - Nezadali ste meno<br>\n422 - nepodarilo sa vymazat subor<br>\n200 - ok",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Pridaj subor",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api\/cloud\/files\/add",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"api_token\": \"quas\",\n    \"path\": \"ab\",\n    \"subor\": \"voluptate\"\n}"
+                        },
+                        "description": "Status kody:<br>\n420 - neplatny token<br>\n421 - Nezadali ste meno<br>\n422 - nepodarilo sa vytvorit subor<br>\n200 - ok",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Zmaz subor",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api\/cloud\/files\/delete",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"api_token\": \"voluptatem\",\n    \"path\": \"consequuntur\",\n    \"subor\": \"ea\"\n}"
+                        },
+                        "description": "Status kody: <br>\n420 - neplatny token <br>\n421 - Nezadali ste meno <br>\n422 - Nepodarilo sa vymazat subor <br>\n200 - ok",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Stiahni subor\nStatus kody:<br>\n420 - neplatny token<br>\n421 - Nezadali ste meno<br>",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api\/cloud\/files\/download",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"api_token\": \"molestiae\",\n    \"path\": \"quia\",\n    \"subor\": \"sunt\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Friends",
+            "description": "",
+            "item": [
+                {
+                    "name": "Zobraz priatelov\nFunkcia ziska priatelov<br>\nStatus kody:<br>\n420 - neplatny token<br>\n200 - ok",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api\/mess\/friends",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"api_token\": \"ullam\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Pridat priatela\nFunkcia prida priatela<br>\nStatus kody:<br>\n420 - neplatny token<br>\n421 - priatel neexistuje<br>\n200 - ok<br>",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api\/mess\/friends\/add",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"api_token\": \"nobis\",\n    \"id\": 4\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Login",
+            "description": "",
+            "item": [
+                {
+                    "name": "Prihlasenie\nFunkcia prihlasi uzivatela vrati mu info<br>\nStatus kody:<br>\n402 - zle udaje<br>\n200 - ok<br>",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api\/login",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"email\": \"id\",\n    \"password\": \"velit\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Message",
+            "description": "",
+            "item": [
+                {
+                    "name": "Odoslanie spravy\nFunkcia vytvori spravu a odosle<br>\nStatus kody:<br>\n420 - neplatny token<br>\n421 - prijmatel neexistuje<br>\n422 - prazdna sprava<br>\n200 - ok",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api\/mess\/send",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"api_token\": \"dolor\",\n    \"id\": 2,\n    \"message\": \"perferendis\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Ziskat spravy\nFunkcia ziska spravy s priatelom<br>\nStatus kody:<br>\n420 - neplatny token<br>\n421 - prijmatel neexistuje<br>\n422 - neplatny pocet sprav<br>\n200 - ok",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api\/mess",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"api_token\": \"est\",\n    \"id\": 14,\n    \"amount\": 22804771\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Postman",
+            "description": "",
+            "item": [
+                {
+                    "name": "CSRF\nVrati CSRF token",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api\/csrf",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Register",
+            "description": "",
+            "item": [
+                {
+                    "name": "Generuj token\nfunkcia vygeneruje novy token na registraciu<br>\nStatus kody:<br>\n304 - Unauthorized<br>\n200 - ok<br>",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api\/regToken",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"api_token\": \"autem\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Registracia\nFunkcia registruje noveho uzivatela<br>\nStatus kody:<br>\n420 - uzivatel existuje<br>\n421 - neplatny token<br>\n422 - Chybaju data<br>\n450 - neviem vytvorit subor<br>\n200 - ok",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api\/register",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"first_name\": \"est\",\n    \"last_name\": \"quia\",\n    \"email\": \"ea\",\n    \"password\": \"ex\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        }
+    ]
+}
